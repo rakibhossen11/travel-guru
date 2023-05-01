@@ -7,6 +7,8 @@ import Contact from "../pages/Contact";
 import Main from "../layout/Main";
 import Login from "../authentication/Login";
 import Register from "../authentication/Register";
+import Booking from "../pages/Booking";
+import Resorts from "../resort/Resorts";
 
 const router = createBrowserRouter([
     {
@@ -40,6 +42,15 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/booking',
+                element: <Booking></Booking>
+            },
+            {
+                path: '/resort',
+                element: <Resorts></Resorts>,
+                loader: ({params}) => fetch('http://localhost:5000/resort')
             }
         ]
     }

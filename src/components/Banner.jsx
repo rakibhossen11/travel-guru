@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -11,9 +12,9 @@ const Banner = () => {
           headquarters in southeastern Bangladesh. It is famous mostly for its
           long natural sandy beach, and it ...
         </p>
-        <button className="px-8 py-4 bg-yellow-400 rounded-md flex gap-2 items-center">
+        <Link to='/booking'><button className="px-8 py-4 bg-yellow-400 rounded-md flex gap-2 items-center">
           Booking <ArrowRightIcon className="h-6 w-6 text-black" />{" "}
-        </button>
+        </button></Link>
       </div>
       <div>
 
