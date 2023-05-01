@@ -9,6 +9,7 @@ import Login from "../authentication/Login";
 import Register from "../authentication/Register";
 import Booking from "../pages/Booking";
 import Resorts from "../resort/Resorts";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
     {
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/resort',
-                element: <Resorts></Resorts>,
+                element: <PrivateRoutes><Resorts></Resorts></PrivateRoutes>,
                 loader: ({params}) => fetch('http://localhost:5000/resort')
             }
         ]
